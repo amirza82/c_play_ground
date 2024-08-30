@@ -38,8 +38,9 @@ int get_line(char *line, int maxline)
     int n = 0;
     while (n++ < maxline && (c = getchar()) != EOF && c != '\n')
         *line++ = c;
-    if (c == EOF)
-        return 0;
     *line = '\0';
-    return n;
+    if (c == EOF)
+        return EOF;
+    else
+        return n;
 }

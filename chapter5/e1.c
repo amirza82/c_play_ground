@@ -32,5 +32,5 @@ int getint(int *pn)
     *pn *= sign;
     if (c1 != EOF)
         ungetch(c1);
-    return c1;
+    return (size_t) c1;
 }
